@@ -1,6 +1,8 @@
-import { formatPrice, getElement } from '../utils.js';
+import { formatPrice, getElement } from '../utils';
+
 const cartItemsDOM = getElement('.cart-items');
-function addToCartDOM(cartItem) {
+
+function addToCartDOM(cartItem: any): void {
   const { id, name, price, image, amount } = cartItem;
   const article = document.createElement('article');
   article.classList.add('cart-item');
@@ -24,4 +26,5 @@ function addToCartDOM(cartItem) {
 `;
   cartItemsDOM.appendChild(article);
 }
+
 export default addToCartDOM;

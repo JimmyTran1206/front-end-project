@@ -1,7 +1,8 @@
-import { getStorageItem, setStorageItem } from './utils.js';
-let store = getStorageItem('store');
+import { getStorageItem, setStorageItem } from './utils';
+import { Product, ProductRaw } from './dataModel';
+let store = getStorageItem('store') as Product[];
 // extract the needed data for the project (data massaging)
-function setupStore(products) {
+function setupStore(products: ProductRaw[]): void {
   store = products.map((product) => {
     let {
       id,
@@ -31,7 +32,9 @@ function setupStore(products) {
   // save products to local storage
   setStorageItem('store', store);
 }
-function findProduct(idString) {
+
+function findProduct(idString: string): Product | undefined {
   return store.find((prod) => prod.id === parseInt(idString));
 }
+
 export { store, setupStore, findProduct };

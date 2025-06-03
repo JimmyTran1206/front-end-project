@@ -2,6 +2,7 @@
   "extends": "./node_modules/@learningfuze/lfz-config/config/tsconfig.json",
   "compilerOptions": {
     "moduleDetection": "legacy",
+    "rootDir": "ts",
     "outDir": "js",
     "noEmit": false
   }

@@ -23,7 +23,7 @@ function formatPrice(price: number): string {
 
 // get items from local storage for products and cart
 function getStorageItem(name: string): any[] {
-  let storageItem = [];
+  let storageItem: any[] = [];
   if (localStorage.getItem(name)) {
     storageItem = JSON.parse(localStorage.getItem(name)!);
   }

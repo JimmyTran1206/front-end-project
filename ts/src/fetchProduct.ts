@@ -1,5 +1,7 @@
-import { allProductsUrl } from './utils.js';
-async function fetchProducts() {
+import { allProductsUrl } from './utils';
+import { ResponseJSON } from './dataModel';
+
+async function fetchProducts(): Promise<ResponseJSON | undefined> {
   try {
     const response = await fetch(allProductsUrl);
     if (!response.ok) {
@@ -11,4 +13,5 @@ async function fetchProducts() {
     console.log(err);
   }
 }
+
 export default fetchProducts;

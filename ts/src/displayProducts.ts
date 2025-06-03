@@ -1,15 +1,18 @@
-import { formatPrice } from './utils.js';
-import { addToCart } from './cart/setupCart.js';
+import { formatPrice } from './utils';
+import { addToCart } from './cart/setupCart';
+import { Product } from './dataModel';
+
 // use function declaration event handler to avoid assigning multiple eventListeners to the container upon filtering.
-function addToCartClickHandler(e) {
-  const eventTarget = e.target;
-  const parent = eventTarget.closest('.product-cart-btn');
+function addToCartClickHandler(e: Event): void {
+  const eventTarget = e.target as HTMLElement;
+  const parent = eventTarget.closest('.product-cart-btn') as HTMLElement;
   if (parent) {
-    addToCart(parent.dataset.id);
+    addToCart(parent.dataset.id!);
   }
 }
+
 // display individual products and add event listener to the container elelment:
-function display(products, element) {
+function display(products: Product[], element: HTMLElement): void {
   element.innerHTML = products
     .map((product) => {
       const { id, name, image, price } = product;
@@ -34,6 +37,8 @@ function display(products, element) {
     `;
     })
     .join('');
+
   element.addEventListener('click', addToCartClickHandler);
 }
+
 export default display;
