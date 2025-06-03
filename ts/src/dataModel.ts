@@ -25,4 +25,5 @@ interface Product {
 interface ResponseJSON {
   products: ProductRaw[];
 }
+
 export { ProductRaw, Product, ResponseJSON };

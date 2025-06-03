@@ -4,6 +4,8 @@
     "moduleDetection": "legacy",
     "rootDir": "ts",
     "outDir": "js",
-    "noEmit": false
-  }
+    "noEmit": false,
+    "typeRoots": ["./node_modules/@types", ".ts/src"]
+  },
+  "include": ["ts/src/**/*", "ts/src/"]
 }
