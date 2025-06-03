@@ -10,6 +10,7 @@
   "keywords": [],
   "devDependencies": {
     "@learningfuze/lfz-config": "^1.0.5",
+    "@types/jquery": "^3.5.32",
     "@typescript-eslint/eslint-plugin": "^6.11.0",
     "@typescript-eslint/parser": "^6.17.0",
     "concurrently": "^9.1.2",
@@ -30,5 +31,8 @@
     "tsc-esm-fix": "^3.1.2",
     "typescript": "^5.3.3"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "jquery.magnify": "^1.6.3"
+  }
 }
