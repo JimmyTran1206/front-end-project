@@ -337,7 +337,7 @@ Hero
   margin-top: -6rem;
   background:
     linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-    url('images/main-bcg.jpg') center/cover;
+    url('../images/main-bcg.jpg') center/cover;
   display: grid;
   place-items: center;
   color: var(--clr-white);
