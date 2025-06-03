@@ -6,7 +6,6 @@ import '../cart/toggleCart';
 // specific
 import { addToCart } from '../cart/setupCart';
 import { singleProductUrl, getElement, formatPrice } from '../utils';
-import $ from 'jquery';
 
 // DOM element selections
 const loading = getElement('.page-loading');
