@@ -4,7 +4,7 @@ import './src/cart/toggleCart';
 import './src/cart/setupCart';
 
 // special import for index page:
-import fetchProducts from './src/fetchProduct';
+import fetchProducts from './src/fetchProducts';
 import { setupStore, store } from './src/store';
 import display from './src/displayProducts';
 import { getElement, shuffleArray } from './src/utils';
