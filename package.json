@@ -12,6 +12,7 @@
     "@learningfuze/lfz-config": "^1.0.5",
     "@typescript-eslint/eslint-plugin": "^6.11.0",
     "@typescript-eslint/parser": "^6.17.0",
+    "concurrently": "^9.1.2",
     "eslint": "^8.22.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-standard": "^17.0.0",
@@ -26,6 +27,7 @@
     "stylelint": "^15.4.0",
     "stylelint-config-recommended": "^11.0.0",
     "stylelint-config-standard": "^32.0.0",
+    "tsc-esm-fix": "^3.1.2",
     "typescript": "^5.3.3"
   },
   "license": "ISC"
