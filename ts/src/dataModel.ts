@@ -26,4 +26,8 @@ interface ResponseJSON {
   products: ProductRaw[];
 }
 
-export { ProductRaw, Product, ResponseJSON };
+interface CartItem extends Product {
+  amount: number;
+}
+
+export { ProductRaw, Product, ResponseJSON, CartItem };
