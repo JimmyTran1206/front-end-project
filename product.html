@@ -3,18 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single Product</title>
     <!-- font-awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-
+    <!-- magnify -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnify/2.3.3/css/magnify.min.css"
+      integrity="sha512-wzhF4/lKJ2Nc8mKHNzoFP4JZsnTcBOUUBT+lWPcs07mz6lK3NpMH1NKCKDMarjaw8gcYnSBNjjllN4kVbKedbw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
     <!-- styles css -->
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Home | Aesthetik</title>
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar">
+    <nav class="navbar page">
       <div class="nav-center">
         <!-- links -->
         <div>
@@ -35,7 +41,7 @@
         </div>
         <!-- logo -->
         <img
-          src="images/logo-white.svg"
+          src="images/logo-black.svg"
           class="nav-logo"
           width="300"
           alt="logo-white" />
@@ -50,17 +56,15 @@
     </nav>
 
     <!-- hero -->
-    <section class="hero">
-      <div class="hero-container">
-        <h1 class="text-slanted">Radiance, Luxury, Beauty</h1>
-        <h3>Express Your Inner Glamour</h3>
-        <a href="products.html" class="hero-btn">Show me more</a>
+    <section class="page-hero">
+      <div class="section-center">
+        <h3 class="page-hero-title">A closer look at</h3>
       </div>
     </section>
 
     <!-- sidebar -->
     <div class="sidebar-overlay">
-      <aside class="sidebar">
+      <div class="sidebar">
         <!-- close button-->
         <button class="sidebar-close"><i class="fas fa-times"></i></button>
         <!-- links -->
@@ -81,12 +85,12 @@
             >
           </li>
         </ul>
-      </aside>
+      </div>
     </div>
 
     <!-- cart -->
     <div class="cart-overlay">
-      <div class="cart">
+      <aside class="cart">
         <button class="cart-close">
           <i class="fas fa-times"></i>
         </button>
@@ -100,40 +104,44 @@
           <h3 class="cart-total text-slanted">Total: $12.99</h3>
           <button class="cart-checkout btn">Check out</button>
         </footer>
-      </div>
+      </aside>
     </div>
+    <!-- product info -->
+    <section class="single-product">
+      <div class="section-center single-product-center">
+        <a href="" class="magnify-anchor">
+          <img src="" class="single-product-img img zoom" alt="" />
+        </a>
 
-    <!--  featured products -->
-    <section class="section featured">
-      <div class="title">
-        <h2>Featured</h2>
-      </div>
-      <div class="featured-center section-center">
-        <h2 class="section-loading">Loading...</h2>
-        <!-- single product -->
-        <!--
-        <article class="product">
-          <div class="product-container">
-            <img src="images/main-bcg.jpg" alt="" class="product-img img" />
-            <div class="product-icons">
-              <a href="product.html?id=1" class="product-icon"
-                ><i class="fas fa-search"></i
-              ></a>
-              <button class="product-cart-btn product-icon" data-id="1">
-                <i class="fas fa-shopping-cart"></i>
-              </button>
-            </div>
+        <article class="single-product-info">
+          <div>
+            <h2 class="single-product-title"></h2>
+            <p class="single-product-company text-slanted"></p>
+            <p class="single-product-price"></p>
+            <div class="single-product-sku"></div>
+            <p class="single-product-desc"></p>
+            <button class="addToCartBtn btn">add to cart</button>
           </div>
-          <footer>
-            <p class="product-name">name</p>
-            <h4 class="product-price">$9.99</h4>
-          </footer>
         </article>
-        -->
-        <!-- end of single product -->
       </div>
-      <a href="products.html" class="btn">All Products</a>
     </section>
-    <script type="module" src="index.js"></script>
+    <div class="page-loading">
+      <h2>Loading...</h2>
+    </div>
+    <!-- jQuery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <!-- magnify plugin -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/magnify/2.3.3/js/jquery.magnify.min.js"
+      integrity="sha512-YKxHqn7D0M5knQJO2xKHZpCfZ+/Ta7qpEHgADN+AkY2U2Y4JJtlCEHzKWV5ZE87vZR3ipdzNJ4U/sfjIaoHMfw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+
+    <!-- page rendering script -->
+    <script type="module" src="./src/pages/product.js"></script>
   </body>
 </html>

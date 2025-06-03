@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products | Aesthetik</title>
     <!-- font-awesome -->
     <link
       rel="stylesheet"
@@ -10,11 +11,10 @@
 
     <!-- styles css -->
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Home | Aesthetik</title>
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar">
+    <nav class="navbar page">
       <div class="nav-center">
         <!-- links -->
         <div>
@@ -35,7 +35,7 @@
         </div>
         <!-- logo -->
         <img
-          src="images/logo-white.svg"
+          src="images/logo-black.svg"
           class="nav-logo"
           width="300"
           alt="logo-white" />
@@ -50,17 +50,17 @@
     </nav>
 
     <!-- hero -->
-    <section class="hero">
-      <div class="hero-container">
-        <h1 class="text-slanted">Radiance, Luxury, Beauty</h1>
-        <h3>Express Your Inner Glamour</h3>
-        <a href="products.html" class="hero-btn">Show me more</a>
+    <section class="page-hero">
+      <div class="section-center">
+        <h3 class="page-hero-title">
+          Don't miss out on these limited-time Aesthetik offers
+        </h3>
       </div>
     </section>
 
     <!-- sidebar -->
     <div class="sidebar-overlay">
-      <aside class="sidebar">
+      <div class="sidebar">
         <!-- close button-->
         <button class="sidebar-close"><i class="fas fa-times"></i></button>
         <!-- links -->
@@ -81,12 +81,12 @@
             >
           </li>
         </ul>
-      </aside>
+      </div>
     </div>
 
     <!-- cart -->
     <div class="cart-overlay">
-      <div class="cart">
+      <aside class="cart">
         <button class="cart-close">
           <i class="fas fa-times"></i>
         </button>
@@ -100,40 +100,38 @@
           <h3 class="cart-total text-slanted">Total: $12.99</h3>
           <button class="cart-checkout btn">Check out</button>
         </footer>
-      </div>
+      </aside>
     </div>
 
-    <!--  featured products -->
-    <section class="section featured">
-      <div class="title">
-        <h2>Featured</h2>
-      </div>
-      <div class="featured-center section-center">
-        <h2 class="section-loading">Loading...</h2>
-        <!-- single product -->
-        <!--
-        <article class="product">
-          <div class="product-container">
-            <img src="images/main-bcg.jpg" alt="" class="product-img img" />
-            <div class="product-icons">
-              <a href="product.html?id=1" class="product-icon"
-                ><i class="fas fa-search"></i
-              ></a>
-              <button class="product-cart-btn product-icon" data-id="1">
-                <i class="fas fa-shopping-cart"></i>
-              </button>
-            </div>
+    <!-- products page content -->
+    <section class="products">
+      <!-- filter -->
+      <div class="filters">
+        <div class="filters-container">
+          <!-- search -->
+          <form class="input-form">
+            <input type="text" class="search-input" placeholder="search..." />
+          </form>
+          <!-- categories -->
+          <h4>Category</h4>
+          <article class="categories">
+            <!-- <button class="category-btn">All</button> -->
+          </article>
+          <!-- price -->
+          <h4>Price</h4>
+          <div class="price-form">
+            <input type="range" class="price-filter" />
           </div>
-          <footer>
-            <p class="product-name">name</p>
-            <h4 class="product-price">$9.99</h4>
-          </footer>
-        </article>
-        -->
-        <!-- end of single product -->
+          <p class="price-value"></p>
+        </div>
       </div>
-      <a href="products.html" class="btn">All Products</a>
+      <!-- products -->
+      <div class="products-container"></div>
     </section>
-    <script type="module" src="index.js"></script>
+    <!-- page loading -->
+    <div class="page-loading">
+      <h2>Loading...</h2>
+    </div>
+    <script type="module" src="./src/pages/products.js"></script>
   </body>
 </html>

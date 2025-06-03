@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Aesthetik</title>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <!-- styles css -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar page"
+      style="position: sticky; top: 0; background: white">
+      <div class="nav-center">
+        <!-- links -->
+        <div>
+          <button class="toggle-nav">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-links">
+            <li>
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li>
+              <a href="products.html" class="nav-link">Products</a>
+            </li>
+            <li>
+              <a href="about.html" class="nav-link">About</a>
+            </li>
+          </ul>
+        </div>
+        <!-- logo -->
+        <img
+          src="images/logo-black.svg"
+          class="nav-logo"
+          width="300"
+          alt="logo-white" />
+        <!-- cart icon -->
+        <div class="toggle-container">
+          <button class="toggle-cart">
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+          <span class="cart-item-count">1</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- hero -->
+    <section class="page-hero">
+      <div class="section-center">
+        <h3 class="page-hero-title">Aesthetik – A Front-End Shopping Site</h3>
+      </div>
+    </section>
+
+    <!-- sidebar -->
+    <div class="sidebar-overlay">
+      <div class="sidebar">
+        <!-- close button-->
+        <button class="sidebar-close"><i class="fas fa-times"></i></button>
+        <!-- links -->
+        <ul class="sidebar-links">
+          <li>
+            <a href="index.html" class="sidebar-link"
+              ><i class="fas fa-home fa-fw"></i>Home</a
+            >
+          </li>
+          <li>
+            <a href="products.html" class="sidebar-link"
+              ><i class="fas fa-spa fa-fw"></i>Products</a
+            >
+          </li>
+          <li>
+            <a href="about.html" class="sidebar-link"
+              ><i class="fas fa-book fa-fw"></i>About</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- cart -->
+    <div class="cart-overlay">
+      <aside class="cart">
+        <button class="cart-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <header>
+          <h3 class="text-slanted">Your Cart</h3>
+        </header>
+        <!-- cart items -->
+        <div class="cart-items"></div>
+        <!-- cart footer -->
+        <footer>
+          <h3 class="cart-total text-slanted">Total: $12.99</h3>
+          <button class="cart-checkout btn">Check out</button>
+        </footer>
+      </aside>
+    </div>
+
+    <!-- about page content -->
+    <section class="section section-center about-page">
+      <div class="title">
+        <h2><span>1.</span>Project Info</h2>
+      </div>
+
+      <p class="about-text">
+        Aesthetik is a front-end web project developed as a mid-term project at
+        LearningFuze Coding Bootcamp to showcase my skills in building
+        responsive, interactive websites using only plain HTML, CSS, and
+        JavaScript, without relying on any external frameworks or libraries.
+        Designed with a modern aesthetic and intuitive user experience in mind,
+        Aesthetik simulates a shopping platform where users can browse products,
+        view details, and manage a cart.
+      </p>
+      <p class="about-text">
+        The project emphasizes clean layout structuring with semantic HTML,
+        visually appealing and responsive design using CSS, and dynamic
+        functionality powered by vanilla JavaScript. Through this project, I
+        aimed to demonstrate a solid understanding of core web development
+        principles, DOM manipulation, and user interaction handling. skills in
+        plain HTML, CSS, and JavaScript.
+      </p>
+      <p class="about-text">Key features include:</p>
+      <ul class="about-text">
+        <li>Product listing and detail views</li>
+        <li>Shopping cart functionality</li>
+        <li>Responsive layout for various screen sizes</li>
+        <li>Smooth UI interactions and transition</li>
+      </ul>
+      <p class="about-text">
+        Aesthetik represents my ability to create fully functional and visually
+        polished front-end applications without the use of frameworks—relying
+        purely on foundational web technologies.
+      </p>
+      <br />
+      <br />
+      <div class="title">
+        <h2><span>2.</span>Technology Used</h2>
+      </div>
+      <p class="about-text">
+        This project showcases a modern, minimalistic e-commerce interface where
+        users can browse products, view item details, and manage a shopping
+        cart—all developed from scratch using foundational web technologies:
+      </p>
+      <ul class="about-text">
+        <li>
+          <img src="images/HTML5-Logo.png" alt="" width="28" /> HTML5: structure
+          all page tags and elements
+        </li>
+        <li>
+          <img src="images/CSS3-Logo.png" alt="" width="28" /> CSS3: styling all
+          elements using one single stylesheet with emphasize on responsiveness
+          across various screen size
+        </li>
+        <li>
+          <img src="images/TypeScript-Logo.png" alt="" width="36" />
+          TypeScript-JavaScript-ES6: TypeScript for type checking, which is
+          transpiled into JavaScript at runtime. The code is organized into
+          reusable modules that serve specific purposes, like carts, filter, and
+          pages
+        </li>
+      </ul>
+    </section>
+    <script type="module" src="./src/pages/about.js"></script>
+  </body>
+</html>
