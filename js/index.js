@@ -3,7 +3,7 @@ import './src/toggleSidebar.js';
 import './src/cart/toggleCart.js';
 import './src/cart/setupCart.js';
 // special import for index page:
-import fetchProducts from './src/fetchProduct.js';
+import fetchProducts from './src/fetchProducts.js';
 import { setupStore, store } from './src/store.js';
 import display from './src/displayProducts.js';
 import { getElement, shuffleArray } from './src/utils.js';
