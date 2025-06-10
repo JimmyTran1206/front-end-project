@@ -337,7 +337,7 @@ Hero
   margin-top: -6rem;
   background:
     linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-    url('../images/main-bcg.jpg') center/cover;
+    url('images/main-bcg.jpg') center/cover;
   display: grid;
   place-items: center;
   color: var(--clr-white);
@@ -795,6 +795,47 @@ Products Page
   color: var(--clr-grey-5);
 }
 
+/*
+==============
+Page buttons for pagination
+==============
+*/
+
+.btn-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.page-btn {
+  width: 2rem;
+  height: 2rem;
+  background: var(--clr-primary-7);
+  border-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0.5rem;
+  transition: var(--transition);
+}
+
+.active-btn {
+  background: var(--clr-primary-1);
+  color: var(--clr-white);
+}
+
+.prev-btn,
+.next-btn {
+  background: transparent;
+  border-color: transparent;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  margin: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
 @media screen and (width >= 768px) {
   .products {
     grid-template-columns: 200px 1fr;
@@ -807,6 +848,11 @@ Products Page
 }
 
 @media screen and (width >= 992px) {
+  .btn-container {
+    margin: 0 auto;
+    max-width: 700px;
+  }
+
   .products-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
