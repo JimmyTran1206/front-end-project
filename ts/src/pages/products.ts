@@ -3,14 +3,16 @@ import '../toggleSidebar';
 import '../cart/toggleCart';
 import '../cart/setupCart';
 
-//  filter imports
+// filter imports
 import setupSearch from '../filters/search';
 import setupCategories from '../filters/categories';
 import setupPrice from '../filters/price';
 
+// pagination imports
+import { displayPagination } from '../pagination/displayPagination';
+
 // specific imports
 import { store, setupStore } from '../store';
-import display from '../displayProducts';
 import { getElement } from '../utils';
 import fetchProducts from '../fetchProducts';
 
@@ -31,7 +33,7 @@ async function init(): Promise<void> {
     }
   }
 
-  display(store, getElement('.products-container'));
+  displayPagination(store);
   // set up the filters
   setupSearch(store);
   setupCategories(store);
