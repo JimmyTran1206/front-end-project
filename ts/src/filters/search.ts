@@ -1,6 +1,6 @@
 import { getElement } from '../utils';
 import { Product } from '../dataModel';
-import { displayPagination } from '../pagination/displayPagination';
+import { displayPagination, resetIndex } from '../pagination/displayPagination';
 
 function setupSearch(store: Product[]): void {
   const form = getElement('.input-form') as HTMLFormElement;
@@ -27,8 +27,10 @@ function setupSearch(store: Product[]): void {
         container.innerHTML = `<h3 class="filter-error">Sorry, no product matched your search</h3>`;
         const btnContainer = getElement('.btn-container');
         btnContainer.innerHTML = '';
+        resetIndex();
       }
     } else {
+      resetIndex();
       displayPagination(store);
     }
   });

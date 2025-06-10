@@ -1,5 +1,8 @@
 import { getElement } from '../utils.js';
-import display from '../displayProducts.js';
+import {
+  displayPagination,
+  resetIndex,
+} from '../pagination/displayPagination.js';
 function setupCategories(store) {
   const categories = [
     'all',
@@ -28,7 +31,8 @@ function setupCategories(store) {
           (product) => product.category === eventTarget.textContent,
         );
       }
-      display(productUnderCategory, getElement('.products-container'));
+      resetIndex();
+      displayPagination(productUnderCategory);
     }
   });
 }

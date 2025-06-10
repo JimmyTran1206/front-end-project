@@ -1,4 +1,4 @@
-const allProductsUrl = 'https://dummyjson.com/products?limit=50';
+const allProductsUrl = 'https://dummyjson.com/products?limit=0';
 const singleProductUrl = 'https://dummyjson.com/products/';
 function getElement(selection) {
   const element = document.querySelector(selection);

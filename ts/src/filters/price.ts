@@ -1,6 +1,6 @@
 import { getElement } from '../utils';
 import { Product } from '../dataModel';
-import { displayPagination } from '../pagination/displayPagination';
+import { displayPagination, resetIndex } from '../pagination/displayPagination';
 
 function setupPrice(store: Product[]): void {
   const priceInput = getElement('.price-filter') as HTMLInputElement;
@@ -26,12 +26,14 @@ function setupPrice(store: Product[]): void {
       (product) => product.price / 100 <= value,
     );
     if (filteredProduct.length >= 1) {
+      resetIndex();
       displayPagination(filteredProduct);
     } else {
       const container = getElement('.products-container');
       container.innerHTML = `<h3 class="filter-error">Sorry, no product matched your price range</h3>`;
       const btnContainer = getElement('.btn-container');
       btnContainer.innerHTML = '';
+      resetIndex();
     }
   });
 }

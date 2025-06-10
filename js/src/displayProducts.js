@@ -8,7 +8,7 @@ function addToCartClickHandler(e) {
     addToCart(parent.dataset.id);
   }
 }
-// display individual products and add event listener to the container elelment:
+// display individual products and add event listener to the container element:
 function display(products, element) {
   element.innerHTML = products
     .map((product) => {

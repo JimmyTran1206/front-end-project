@@ -1,5 +1,8 @@
 import { getElement } from '../utils.js';
-import display from '../displayProducts.js';
+import {
+  displayPagination,
+  resetIndex,
+} from '../pagination/displayPagination.js';
 function setupPrice(store) {
   const priceInput = getElement('.price-filter');
   const priceValue = getElement('.price-value');
@@ -21,10 +24,14 @@ function setupPrice(store) {
       (product) => product.price / 100 <= value,
     );
     if (filteredProduct.length >= 1) {
-      display(filteredProduct, getElement('.products-container'));
+      resetIndex();
+      displayPagination(filteredProduct);
     } else {
       const container = getElement('.products-container');
       container.innerHTML = `<h3 class="filter-error">Sorry, no product matched your price range</h3>`;
+      const btnContainer = getElement('.btn-container');
+      btnContainer.innerHTML = '';
+      resetIndex();
     }
   });
 }
