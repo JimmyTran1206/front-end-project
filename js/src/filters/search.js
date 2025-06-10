@@ -1,5 +1,8 @@
 import { getElement } from '../utils.js';
-import display from '../displayProducts.js';
+import {
+  displayPagination,
+  resetIndex,
+} from '../pagination/displayPagination.js';
 function setupSearch(store) {
   const form = getElement('.input-form');
   const nameInput = getElement('.search-input');
@@ -16,13 +19,17 @@ function setupSearch(store) {
         product.name.toLowerCase().includes(value.toLowerCase()),
       );
       if (filteredProducts.length >= 1) {
-        display(filteredProducts, getElement('.products-container'));
+        displayPagination(filteredProducts);
       } else {
         const container = getElement('.products-container');
         container.innerHTML = `<h3 class="filter-error">Sorry, no product matched your search</h3>`;
+        const btnContainer = getElement('.btn-container');
+        btnContainer.innerHTML = '';
+        resetIndex();
       }
     } else {
-      display(store, getElement('.products-container'));
+      resetIndex();
+      displayPagination(store);
     }
   });
 }

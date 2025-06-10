@@ -1,4 +1,4 @@
-const allProductsUrl: string = 'https://dummyjson.com/products?limit=50';
+const allProductsUrl: string = 'https://dummyjson.com/products?limit=0';
 
 const singleProductUrl: string = 'https://dummyjson.com/products/';
 

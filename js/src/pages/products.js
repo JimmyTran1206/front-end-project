@@ -2,13 +2,14 @@
 import '../toggleSidebar.js';
 import '../cart/toggleCart.js';
 import '../cart/setupCart.js';
-//  filter imports
+// filter imports
 import setupSearch from '../filters/search.js';
 import setupCategories from '../filters/categories.js';
 import setupPrice from '../filters/price.js';
+// pagination imports
+import { displayPagination } from '../pagination/displayPagination.js';
 // specific imports
 import { store, setupStore } from '../store.js';
-import display from '../displayProducts.js';
 import { getElement } from '../utils.js';
 import fetchProducts from '../fetchProducts.js';
 async function init() {
@@ -26,7 +27,7 @@ async function init() {
       console.log(error);
     }
   }
-  display(store, getElement('.products-container'));
+  displayPagination(store);
   // set up the filters
   setupSearch(store);
   setupCategories(store);

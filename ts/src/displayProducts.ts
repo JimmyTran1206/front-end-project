@@ -11,7 +11,7 @@ function addToCartClickHandler(e: Event): void {
   }
 }
 
-// display individual products and add event listener to the container elelment:
+// display individual products and add event listener to the container element:
 function display(products: Product[], element: HTMLElement): void {
   element.innerHTML = products
     .map((product) => {
