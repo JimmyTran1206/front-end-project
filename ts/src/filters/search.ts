@@ -1,6 +1,6 @@
 import { getElement } from '../utils';
-import display from '../displayProducts';
 import { Product } from '../dataModel';
+import { displayPagination } from '../pagination/displayPagination';
 
 function setupSearch(store: Product[]): void {
   const form = getElement('.input-form') as HTMLFormElement;
@@ -21,13 +21,15 @@ function setupSearch(store: Product[]): void {
         product.name.toLowerCase().includes(value.toLowerCase()),
       );
       if (filteredProducts.length >= 1) {
-        display(filteredProducts, getElement('.products-container'));
+        displayPagination(filteredProducts);
       } else {
         const container = getElement('.products-container');
         container.innerHTML = `<h3 class="filter-error">Sorry, no product matched your search</h3>`;
+        const btnContainer = getElement('.btn-container');
+        btnContainer.innerHTML = '';
       }
     } else {
-      display(store, getElement('.products-container'));
+      displayPagination(store);
     }
   });
 }

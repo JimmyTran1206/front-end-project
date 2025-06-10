@@ -1,6 +1,6 @@
 import { getElement } from '../utils';
-import display from '../displayProducts';
 import { Product } from '../dataModel';
+import { displayPagination } from '../pagination/displayPagination';
 
 function setupCategories(store: Product[]): void {
   const categories: string[] = [
@@ -30,7 +30,7 @@ function setupCategories(store: Product[]): void {
           (product) => product.category === eventTarget.textContent,
         );
       }
-      display(productUnderCategory, getElement('.products-container'));
+      displayPagination(productUnderCategory);
     }
   });
 }

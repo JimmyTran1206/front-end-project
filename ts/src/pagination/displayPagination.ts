@@ -4,7 +4,9 @@ import paginate from './paginate';
 import { getElement } from '../utils';
 import { Product } from '../dataModel';
 
-// function to display pagination given an input product array
+// Display the UI: button in sync of products from store
+// Use an index to keep track of active page
+// Logic for page clicks and next-prev buttons
 const btnContainer = document.querySelector('.btn-container') as HTMLElement;
 let index: number = 0;
 let storePages: Product[][] = []; // array of product arrays
@@ -37,6 +39,7 @@ function paginationBtnHandler(e: Event): void {
 }
 btnContainer.addEventListener('click', paginationBtnHandler);
 
+// function to display pagination given an input product array
 function displayPagination(store: Product[]): void {
   storePages = paginate(store);
   setupUI();
