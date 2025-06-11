@@ -1,7 +1,7 @@
 // global imports for functionality in index/products/product/about page
 import '../toggleSidebar.js';
 import '../cart/toggleCart.js';
-// import '../cart/setupCart';
+import '../checkout.js';
 // specific
 import { addToCart } from '../cart/setupCart.js';
 import { singleProductUrl, getElement, formatPrice } from '../utils.js';
