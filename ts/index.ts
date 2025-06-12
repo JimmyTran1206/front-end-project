@@ -2,6 +2,7 @@
 import './src/toggleSidebar';
 import './src/cart/toggleCart';
 import './src/cart/setupCart';
+import './src/checkout';
 
 // special import for index page:
 import fetchProducts from './src/fetchProducts';

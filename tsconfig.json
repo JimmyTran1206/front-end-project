@@ -7,5 +7,5 @@
     "noEmit": false,
     "typeRoots": ["./node_modules/@types", ".ts/src"]
   },
-  "include": ["ts/src/**/*", "ts/src/"]
+  "include": ["ts/src/**/*", "ts/src/", "ts/"]
 }

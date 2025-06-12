@@ -19,7 +19,9 @@ function display(products: Product[], element: HTMLElement): void {
       return `
     <article class="product">
           <div class="product-container">
-            <img src="${image}" alt="${name}" class="product-img img" />
+          <a href="product.html?id=${id}">
+                <img src="${image}" alt="${name}" class="product-img img" /></a>
+
             <div class="product-icons">
               <a href="product.html?id=${id}" class="product-icon"
                 ><i class="fas fa-search"></i

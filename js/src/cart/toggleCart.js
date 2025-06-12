@@ -13,7 +13,7 @@ closeCartBtn.addEventListener('click', () => {
 // close cart if click outside the cart area
 cartOverlay.addEventListener('click', (e) => {
   const eventTarget = e.target;
-  const insideCartArea = eventTarget.closest('aside.cart');
+  const insideCartArea = eventTarget.closest('.cart');
   if (!insideCartArea) {
     cartOverlay.classList.remove('show');
   }

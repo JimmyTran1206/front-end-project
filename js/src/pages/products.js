@@ -2,6 +2,7 @@
 import '../toggleSidebar.js';
 import '../cart/toggleCart.js';
 import '../cart/setupCart.js';
+import '../checkout.js';
 // filter imports
 import setupSearch from '../filters/search.js';
 import setupCategories from '../filters/categories.js';

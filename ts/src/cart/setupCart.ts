@@ -15,7 +15,18 @@ const cartItemCountDOM = getElement('.cart-item-count');
 const cartItemsDOM = getElement('.cart-items');
 const cartTotalDOM = getElement('.cart-total');
 
+// control variable for cart
 let cart = getStorageItem('cart') as CartItem[];
+
+// reset cart function - used for checkout
+function resetCart(): void {
+  cart = [];
+  setStorageItem('cart', cart);
+}
+// read the control variable - used for checkout
+function readCart(): CartItem[] {
+  return cart;
+}
 
 // define and call function to run and update cart every time the module is imported (into Home, Products, Product, and About pages) to persist the cart and cartDOM
 function init(): void {
@@ -161,4 +172,4 @@ function addToCart(idString: string): void {
   openCart();
 }
 
-export { addToCart };
+export { addToCart, resetCart, readCart };

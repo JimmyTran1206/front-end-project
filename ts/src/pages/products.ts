@@ -2,6 +2,7 @@
 import '../toggleSidebar';
 import '../cart/toggleCart';
 import '../cart/setupCart';
+import '../checkout';
 
 // filter imports
 import setupSearch from '../filters/search';

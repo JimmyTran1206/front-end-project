@@ -335,6 +335,7 @@ Hero
 .hero {
   min-height: 100vh;
   margin-top: -6rem;
+  margin-right: -3rem;
   background:
     linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
     url('../images/main-bcg.jpg') center/cover;
@@ -958,4 +959,38 @@ Single Product Page
   .single-product-center {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+/*
+===============
+Checkout dialog
+===============
+*/
+dialog {
+  border: none;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background: white;
+  max-width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* ensure it's above other content */
+  border-color: transparent;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0 1rem;
+}
+
+.dialog-text {
+  text-align: center;
 }
