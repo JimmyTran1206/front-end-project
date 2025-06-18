@@ -4,7 +4,7 @@ function addToCartDOM(cartItem) {
   const { id, name, price, image, amount } = cartItem;
   const article = document.createElement('article');
   article.classList.add('cart-item');
-  article.setAttribute('data-id', id);
+  article.setAttribute('data-id', id.toString());
   article.innerHTML = `
             <img src="${image}" class="cart-item-img" alt="${name}" />
             <div>

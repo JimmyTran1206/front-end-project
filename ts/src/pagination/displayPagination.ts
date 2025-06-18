@@ -16,7 +16,7 @@ function setupUI(): void {
   displayButtons(btnContainer, storePages, index); // pass in the index to check active button UI
 }
 
-// Every time the button is clicked, change the index, and regenerate the UI
+// Every time the button is clicked, change the index, and regenerate the UI. This event handler can also be written as an anonymous function. Function declaration is used for clarity only.
 function paginationBtnHandler(e: Event): void {
   const eventTarget = e.target as HTMLElement;
   if (eventTarget.classList.contains('btn-container')) return;

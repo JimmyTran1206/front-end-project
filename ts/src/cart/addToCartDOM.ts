@@ -1,12 +1,13 @@
+import { CartItem } from '../dataModel';
 import { formatPrice, getElement } from '../utils';
 
 const cartItemsDOM = getElement('.cart-items');
 
-function addToCartDOM(cartItem: any): void {
+function addToCartDOM(cartItem: CartItem): void {
   const { id, name, price, image, amount } = cartItem;
   const article = document.createElement('article');
   article.classList.add('cart-item');
-  article.setAttribute('data-id', id);
+  article.setAttribute('data-id', id.toString());
   article.innerHTML = `
             <img src="${image}" class="cart-item-img" alt="${name}" />
             <div>
